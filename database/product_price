@@ -1,0 +1,49 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 12, 2015 at 12:41 PM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `mysql`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_price`
+--
+
+CREATE TABLE `product_price` (
+  `id` int(11) NOT NULL COMMENT 'product id',
+  `price` double NOT NULL COMMENT 'price of the product',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for table `product_price`
+--
+ALTER TABLE `product_price`
+  ADD CONSTRAINT `product_price_ibfk_1` FOREIGN KEY (`id`) REFERENCES `product_details` (`id`);
+
+--
+-- Dumping data for table `product_price`
+--
+
+INSERT INTO `product_price` (`id`, `price`) VALUES
+(2222, 199.99),
+(3333, 299.99),
+(4444, 399.99),
+(5555, 499.99),
+(6666, 599.99),
+(7777, 100),
+(8888, 100);
+
+
+

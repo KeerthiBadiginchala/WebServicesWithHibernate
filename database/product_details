@@ -1,0 +1,42 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 12, 2015 at 05:19 AM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `mysql`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_details`
+--
+
+CREATE TABLE `product_details` (
+  `id` int(11) NOT NULL COMMENT 'unique id associated with each product',
+  `sku` varchar(50) NOT NULL COMMENT 'product code',
+  `name` varchar(50) NOT NULL COMMENT 'name of the product',
+  `category` varchar(50) NOT NULL COMMENT 'product category',
+  `last_updated` varchar(10) DEFAULT '2015-06-08',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Product details';
+
+--
+-- Dumping data for table `product_details`
+--
+
+INSERT INTO `product_details` (`id`, `sku`, `name`, `category`, `last_updated`) VALUES
+(2222, 'AEX2222', 'Stroller', 'baby', '2015-06-10'),
+(3333, 'AEX3333', 'Stroller', 'baby', '2015-06-09'),
+(4444, 'AEX4444', 'Stroller', 'baby', '2015-06-08'),
+(5555, 'IOL5555', 'Optimus Prime', 'toys', '2015-06-07'),
+(6666, 'IOL6666', 'Optimus Prime', 'toys', '2015-06-06'),
+(7777, 'XYZ7777', 'Optimus Prime', 'toys', '2015-06-05');
